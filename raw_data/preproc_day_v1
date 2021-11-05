@@ -1,0 +1,9 @@
+#!/bin/bash
+IN_DIR="/home/brainhacker/inflammation_proj/raw_data"
+DAY=13;
+csv_files=("${IN_DIR}"/*/inflammation*.csv)
+for (( I=0; I<${#csv_files[@]}; I+=1 )); do
+    echo "Name of Parent directory: ${csv_files[I]%inflammation*}"
+    echo "Name of the file: ${csv_files[I]#*region}"
+    
+done
